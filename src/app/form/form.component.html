@@ -1,0 +1,29 @@
+<div class="container">
+    <h1>Employee Form</h1>
+    <form #myform="ngForm">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" [(ngModel)]="model.id" class="form-control" name="id" required>
+      </div>
+  
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" [(ngModel)]="model.name" class="form-control" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="salary">Salary</label>
+        <input type="text" [(ngModel)]="model.salary" class="form-control" name="salary" required>
+      </div>
+
+      <div class="form-group">
+        <label for="department">Department</label>
+        <input type="text" [(ngModel)]="model.department" class="form-control" name="department" required>
+      </div>
+    
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+    {{model.id}} {{model.name}} {{model.salary}} {{model.department}} 
+</div>
