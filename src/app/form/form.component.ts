@@ -28,6 +28,10 @@ export class FormComponent implements OnInit {
     formObj.reset();
 
   }
+   deleteRow(i){
+    console.log(i);
+    this.rows.splice(i,1)
+  }
   constructor() { }
 
   ngOnInit() {

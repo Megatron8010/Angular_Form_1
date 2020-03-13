@@ -36,12 +36,16 @@
 <th *ngFor = "let column of headers">
       {{column}}
 </th>
+<th>
+  Actions
+</th>
     </tr>
 </thead>
-<tr *ngFor = "let row of rows">
+<tr *ngFor = "let row of rows; index as i">
     <td *ngFor = "let column of headers">
       {{row[column]}}
     </td>
+    <button (click) = "deleteRow(i)">Delete</button>
 </tr>
 </table>
 </div>
