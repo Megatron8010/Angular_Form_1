@@ -1,6 +1,6 @@
 <div class="container">
     <h1>Employee Form</h1>
-    <form #myform="ngForm">
+    <form #myform="ngForm" (ngSubmit)="onUpdate(myform)">
       <div class="form-group">
         <label for="id">ID</label>
         <input type="text" [(ngModel)]="model.id" class="form-control" name="id" required>
@@ -12,7 +12,7 @@
       </div>
 
       <div class="form-group">
-        <label for="salary">Salary</label>
+        <label for="sal ary">Salary</label>
         <input type="text" [(ngModel)]="model.salary" class="form-control" name="salary" required>
       </div>
 
@@ -26,4 +26,24 @@
 
     </form>
     {{model.id}} {{model.name}} {{model.salary}} {{model.department}} 
+    <br>
+    <br>
 </div>
+<div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+<th *ngFor = "let column of headers">
+      {{column}}
+</th>
+    </tr>
+</thead>
+<tr *ngFor = "let row of rows">
+    <td *ngFor = "let column of headers">
+      {{row[column]}}
+    </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
